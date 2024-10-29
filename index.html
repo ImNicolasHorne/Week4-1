@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nicolas Horne Portfolio.1</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "wieleep3hO06Trmzp",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <section id="landing">
+      <nav>
+        <figure>
+          <img id="personal-logo" src="./assets/ownLogo.jpeg" alt="" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              ><i class="fas fa-adjust"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <header class="header">
+            <div class="header__content">
+              <h1 class="title">Hey,</h1>
+              <h1 class="title title--secondary">I'm Nicolas</h1>
+              <p class="header__para">
+                I'm a <b class="color">Frontend Software engineer</b> pasionate
+                about giving users the best experience possible.
+                <br />
+                Here's a bit <b class="color">about me.</b>
+              </p>
+              <div class="social__list">
+                <a
+                  href="https://picsum.photos/600/800"
+                  target="_blank"
+                  class="social__link click"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://github.com/ImNicolasHorne"
+                  target="_blank"
+                  class="social__link click"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="./assets/Resumé_Horne_N.pdf"
+                  target="_blank"
+                  class="social__link click"
+                >
+                  <i class="fas fa-file-pdf"></i>
+                </a>
+              </div>
+            </div>
+          </header>
+          <button class="mail__btn click">
+            <i class="fas fa-envelope"></i>
+          </button>
+          <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+          </a>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a little about myself.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Front Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a 25-year-old American
+            <b class="color">frontend software engineer</b> passionate about
+            developing websites for optimal
+            <b class="color">user experiences.</b>
+            <br />
+            I'm currently looking to land my first Frontend job. I am
+            <b class="color">condident</b> in my ability to deal with complex
+            problems and am excited and ready to be a
+            <b class="color">valuable</b> part of a great team of
+            <b class="color">talented</b> and
+            <b class="color">experienced</b> software engineers.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">Incoming</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'd love to hear from you!
+          </h4>
+          <form onsubmit="contact(event)" id="contact__form">
+            <div class="form__Item">
+              <label class="form__item--label">Name</label>
+              <input type="text" name="user_name" class="input" required />
+            </div>
+            <div class="form__Item">
+              <label class="form__item--label">Email</label>
+              <input type="email" name="user_email" class="input" required />
+            </div>
+            <div class="form__Item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                name="message"
+                id=""
+                class="input"
+                type="text"
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it on over!
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for getting in touch! Looking forward to speaking with you
+            soon.
+          </div>
+        </div>
+        <i class="fas fa-times modal__exit click"></i>
+      </div>
+    </section>
+
+    <!--
+    PROJECTS
+    -->
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="color">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, Vue, Vuex
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    dolores laboriosam repudiandae, quo consectetur ducimus vel
+                    atque ipsum modi doloribus, aperiam animi expedita facilis
+                    assumenda?
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, Vue, Vuex
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    dolores laboriosam repudiandae, quo consectetur ducimus vel
+                    atque ipsum modi doloribus, aperiam animi expedita facilis
+                    assumenda?
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, Vue, Vuex
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    dolores laboriosam repudiandae, quo consectetur ducimus vel
+                    atque ipsum modi doloribus, aperiam animi expedita facilis
+                    assumenda?
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    FOOTER
+    -->
+
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img src="./assets/ownLogo.jpeg" class="footer__logo--img" alt="" />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="https://github.com/ImNicolasHorne"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Github
+            </a>
+            <a
+              href="https://github.com/ImNicolasHorne"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/ImNicolasHorne"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Contact
+            </a>
+            <a
+              href="https://github.com/ImNicolasHorne"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Resume
+            </a>
+          </div>
+          <div class="footer__copyright">Copyright © 2024 Nicolas Horne</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
